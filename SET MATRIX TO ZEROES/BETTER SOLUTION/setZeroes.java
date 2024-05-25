@@ -3,17 +3,19 @@ class Solution {
        int i,j;
        int m=matrix.length;
        int n=matrix[0].length;
+      int[] row=new int[m];
+      int[] col=new int[n];
        for(i=0;i<m;i++){
          for(j=0;j<n;j++){
             if(matrix[i][j]==0){
-                markrow(i,n,matrix);
-                markcol(j,m,matrix);
+                row[i]=1;
+                col[j]=1;
             }
          }
        }
        for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            if(matrix[i][j]==-1)
+            if(row[i]==1 || col[j]==1)
              matrix[i][j]=0;
         }
        }
@@ -22,18 +24,5 @@ class Solution {
             System.out.print(matrix[i][j]);
         }
        }
-    }
-
-    public static void markrow(int i,int n,int[][] matrix){
-        for(int j=0;j<n;j++){
-            if(matrix[i][j]!=0)
-             matrix[i][j]=-1;
-        }
-    }
-     public static void markcol(int j,int m,int[][] matrix){
-        for(int i=0;i<m;i++){
-            if(matrix[i][j]!=0)
-             matrix[i][j]=-1;
-        }
     }
 }
