@@ -1,4 +1,4 @@
-class Solution {
+class setZero {
     public  static void setZeroes(int[][] matrix) {
        int i,j;
        int m=matrix.length;
