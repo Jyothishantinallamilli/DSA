@@ -13,7 +13,7 @@ class Solution {
        }
        for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            if(matrix[i][j]==-10)
+            if(matrix[i][j]==-1)
              matrix[i][j]=0;
         }
        }
@@ -27,13 +27,13 @@ class Solution {
     public static void markrow(int i,int n,int[][] matrix){
         for(int j=0;j<n;j++){
             if(matrix[i][j]!=0)
-             matrix[i][j]=-10;
+             matrix[i][j]=-1;
         }
     }
      public static void markcol(int j,int m,int[][] matrix){
         for(int i=0;i<m;i++){
             if(matrix[i][j]!=0)
-             matrix[i][j]=-10;
+             matrix[i][j]=-1;
         }
     }
     
